@@ -22,7 +22,7 @@ public class Academia {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
     public void setTelefone(String telefone) {
