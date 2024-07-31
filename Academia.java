@@ -1,9 +1,12 @@
 public class Academia {
     private String nome;
     private String endereco;
-    private int telefone;
+    private String telefone;
 
-    public Academia{
+    public Academia(String nome, String endereco, String telefone){
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
         
     }
 
@@ -22,7 +25,7 @@ public class Academia {
     public int getTelefone() {
         return telefone;
     }
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
