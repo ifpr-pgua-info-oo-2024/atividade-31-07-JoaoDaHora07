@@ -1,27 +1,25 @@
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Aluno {
-    private String nome;
+public class Aluno extends Pessoa{
+   
     private String nivel;
-    private Date dataNascimento;
-    private String genero;
-    private double altura;
-    private double peso;
+    
+    
+    
+    
 
-    public Aluno (String nome, String nivel, Date dataNascimento){
-        this(nome, nivel,dataNascimento,"Não Informado",0.0,0.0);
+    
+
+    public Aluno (String nome, String nivel, String dataNascimento,String genero, double altura, double peso) throws ParseException{
+        super(nome, genero, dataNascimento, altura, peso);
+
+        this.nivel = nivel;
 
     }
-
-    public Aluno (String nome, String nivel, Date dataNascimento,String genero, double altura, double peso){
-        this.nome = nome;
-        this.nivel = nivel;
-        this.dataNascimento = dataNascimento;
-        this.genero = genero;
-        this.altura = altura;
-        this.peso = peso;
-
+    public Aluno (String nome, String nivel, String dataNascimento) throws ParseException{
+        this(nome,nivel ,dataNascimento,"Não Informado",0.0,0.0);
     }
 
     public String getNome() {

@@ -10,14 +10,14 @@ public class Main {
         Academia academia2 = new Academia("Centro Esportivo Caopi","John kennedy", "4155555555");
 
         SimpleDateFormat format = new SimpleDateFormat ("dd/MM/yyyy");
-        Date data = format.parse("10/01/1900");
+        Date data = format.parse("12/07/2007");
 
-        academia1.alunos.add(new Aluno("Jayson Tatum","Alto",data));
-        academia1.alunos.add(new Aluno("MF DOOM","Baixo",data));
-        academia1.alunos.add(new Aluno("Michael Jordan","Medio",data));
-        academia2.alunos.add(new Aluno("Anthony Davis","Alto",data));
-        academia2.alunos.add(new Aluno("Anthony Edwards","Baixo",data));
-        academia2.alunos.add(new Aluno("Lebron James","Medio",data));
+        academia1.alunos.add(new Aluno("Jayson Tatum","Alto","12/07/2007"));
+        academia1.alunos.add(new Aluno("MF DOOM","Baixo","10/01/2009"));
+        academia1.alunos.add(new Aluno("Michael Jordan","Medio","10/01/2009"));
+        academia2.alunos.add(new Aluno("Anthony Davis","Alto","10/01/2009"));
+        academia2.alunos.add(new Aluno("Anthony Edwards","Baixo","10/01/2009"));
+        academia2.alunos.add(new Aluno("Lebron James","Medio","10/01/2009"));
 
 
         System.out.println(academia1.getNome());
@@ -56,6 +56,8 @@ public class Main {
             System.out.println();
 
         }
+
+        System.out.println(academia1.alunos.get(1).calcularIdade());
 
     }
         
