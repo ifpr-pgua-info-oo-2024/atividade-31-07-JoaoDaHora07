@@ -2,6 +2,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     
@@ -58,6 +59,31 @@ public class Main {
         }
 
         System.out.println(academia1.alunos.get(1).calcularIdade());
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite as Informações dos alunos da Academia 1");
+        for(int i = 0; i < academia1.alunos.size(); i++){
+            System.out.println();
+            System.out.println("Digite o Nome do Aluno");
+            academia1.alunos.get(i).nome = scan.next();
+            System.out.println("Digite o genero do Aluno");
+            academia1.alunos.get(i).genero = scan.next();
+            System.out.println("Digite a Data de Nascimento do Aluno");
+            academia1.alunos.get(i).dataNascimento = academia1.alunos.get(i).convertStringToDate(scan.next());
+            System.out.println("Digite a altura do Aluno");
+            academia1.alunos.get(i).altura = scan.nextDouble();
+            System.out.println("Digite o peso do Aluno ");
+            academia1.alunos.get(i).peso = scan.nextDouble();
+            System.out.println("Digite o Nivel do Aluno");
+            academia1.alunos.get(i).setNivel(scan.next());
+        }
+
+        for(Aluno aluno: academia1.alunos){
+            System.out.println(aluno.toString());
+            System.out.println();
+
+
+        }
 
     }
         
